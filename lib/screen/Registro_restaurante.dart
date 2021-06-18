@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:codelabs/screen/Api.dart';
+import 'package:codelabs/NumbreScreens/Mapa.dart';
 
 class REGISTRO_RESTAURANTE extends StatelessWidget  {
   TextEditingController DNI = TextEditingController();
@@ -13,9 +14,6 @@ class REGISTRO_RESTAURANTE extends StatelessWidget  {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.orange,
-        ),
         body: Padding(
             padding: EdgeInsets.all(10),
             child: ListView(
@@ -81,13 +79,34 @@ class REGISTRO_RESTAURANTE extends StatelessWidget  {
                     ),
                   ),
                 ),
+                 Container(
+                  child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            FlatButton(
+              onPressed: () => {},
+              color: Colors.white,
+              padding: EdgeInsets.all(10.0),
+              child: Column(
+                // Replace with a Row for horizontal icon + text
+                children: <Widget>[
+                  Image.network(
+                    "https://www.mjcachon.com/wp-content/uploads/2017/01/Ejemplo-como-llegar-google-maps.jpg",
+                    //width: 250,
+                    //height: 200,
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),),
                 Container(
                   height: 50,
                     padding: EdgeInsets.fromLTRB(10, 5, 10, 0),
                     child: RaisedButton(
                       textColor: Colors.white,
                       color: Colors.orange,
-                      child: Text('REGISTRAR REST.'),
+                      child: Text('REGISTRAR RESTAURANTE'),
                       onPressed: () {
                         Navigator.push(
                          context,
