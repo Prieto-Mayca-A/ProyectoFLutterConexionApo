@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:codelabs/screen/Login.dart';
+import 'package:codelabs/screen/Api.dart';
 
-class REGISTRO extends StatelessWidget  {
-  TextEditingController nameController = TextEditingController();
-  TextEditingController ApellidosController = TextEditingController();
-  TextEditingController DireccionController = TextEditingController();
-  TextEditingController SexoController = TextEditingController();
-  TextEditingController ComidaController = TextEditingController();
+class REGISTRO_RESTAURANTE extends StatelessWidget  {
+  TextEditingController DNI = TextEditingController();
+  TextEditingController NombreRestaurante = TextEditingController();
+  TextEditingController Ubicacion = TextEditingController();
+  TextEditingController Direccion = TextEditingController();
+  TextEditingController Descripcion = TextEditingController();
+  TextEditingController Contacto = TextEditingController();
+  TextEditingController Puntuacion = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -22,50 +24,60 @@ class REGISTRO extends StatelessWidget  {
                  Container(
                   padding: EdgeInsets.all(10),
                   child: TextField(
-                    controller: nameController,
+                    controller: DNI,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Nombre de Usuario',
+                      labelText: 'DNI',
                     ),
                   ),
                 ),
                  Container(
                   padding: EdgeInsets.all(10),
                   child: TextField(
-                    controller: ApellidosController,
+                    controller: NombreRestaurante,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Apellidos de Usuario',
+                      labelText: 'Nombre del restaurante',
                     ),
                   ),
                 ),
                  Container(
                   padding: EdgeInsets.all(10),
                   child: TextField(
-                    controller: DireccionController,
+                    controller: Ubicacion,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Direccion de correo',
+                      labelText: 'Ubicacion',
                     ),
                   ),
                 ),
                  Container(
                   padding: EdgeInsets.all(10),
                   child: TextField(
-                    controller: SexoController,
+                    controller: Direccion,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Sexo',
+                      labelText: 'Direccion',
                     ),
                   ),
                 ),
-                 Container(
+                Container(
                   padding: EdgeInsets.all(10),
                   child: TextField(
-                    controller: ComidaController,
+                    controller: Descripcion,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Cual es tu comida favorita?',
+                      labelText: 'Descripcion',
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.all(10),
+                  child: TextField(
+                    controller: Contacto,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Contacto',
                     ),
                   ),
                 ),
@@ -75,11 +87,11 @@ class REGISTRO extends StatelessWidget  {
                     child: RaisedButton(
                       textColor: Colors.white,
                       color: Colors.orange,
-                      child: Text('INGRESAR'),
+                      child: Text('REGISTRAR REST.'),
                       onPressed: () {
                         Navigator.push(
                          context,
-                         MaterialPageRoute(builder: (context) => TECFOOD()),
+                         MaterialPageRoute(builder: (context) => Api()),
                         );  
                       },
                     )),

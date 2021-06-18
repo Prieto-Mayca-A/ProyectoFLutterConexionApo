@@ -1,14 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:codelabs/screen/Login.dart';
-
-List<Widget> listado( List<dynamic> info ){
-
-  List<Widget> lista = [];
-  info.forEach((elemento) {
-    lista.add(Text(elemento["name"]));
-  });
-  return lista;
-}
+import 'dart:async';  
 
 void main() {
   runApp(MaterialApp(
@@ -16,7 +8,32 @@ void main() {
   ));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget {  
+  @override  
+  Widget build(BuildContext context) {  
+    return MaterialApp(  
+      home: SplasScreen(),  
+      debugShowCheckedModeBanner: false,  
+    );  
+  }  
+}  
+  
+class SplasScreen extends StatefulWidget {  
+  @override  
+  SplashScreenState createState() => SplashScreenState();  
+}  
+class SplashScreenState extends State<SplasScreen> {  
+  @override  
+  void initState() {  
+    super.initState();  
+    Timer(Duration(seconds: 3),  
+            ()=>Navigator.pushReplacement(context,  
+            MaterialPageRoute(builder:  
+                (context) => TECFOOD()  
+            )  
+         )  
+    );  
+  }  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,25 +45,19 @@ class MyApp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             SizedBox( height: 30,),
-            Image.asset('images/tecfood.jpg'),
-          Container(
-                  height: 50,
-                    padding: EdgeInsets.fromLTRB(10, 20, 10, 0),
-                    child: RaisedButton(
-                      textColor: Colors.white,
-                      color: Colors.orange,
-                      child: Text('Siguiente'),
-                      onPressed: () {
-                         Navigator.push(
-                         context,
-                         MaterialPageRoute(builder: (context) => TECFOOD()),
-                        );
-                      },
-                    )),  
+            Image.asset('images/tecfood.jpg'), 
           ],
         ),
       ),
     );
   }
-}
+} 
 
+List<Widget> listado( List<dynamic> info ){
+
+  List<Widget> lista = [];
+  info.forEach((elemento) {
+    lista.add(Text(elemento["name"]));
+  });
+  return lista;
+}

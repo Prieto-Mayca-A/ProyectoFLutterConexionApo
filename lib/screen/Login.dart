@@ -23,7 +23,7 @@ class TECFOOD extends StatelessWidget  {
                     
                     child: Text(
                       'Una App Arequipeña\n'
-                      'para Arequipeños pe',
+                      '   para Arequipeños',
                       style: TextStyle(fontSize: 20),
                     )),
                 Container(
@@ -95,25 +95,7 @@ class TECFOOD extends StatelessWidget  {
                          MaterialPageRoute(builder: (context) => FourdRoute()),
                         );  
                       },
-                    )),
-                    /*
-                Container(
-                  height: 50,
-                    padding: EdgeInsets.fromLTRB(10, 5, 10, 0),
-                    child: RaisedButton(
-                      textColor: Colors.white,
-                      color: Colors.green,
-                      child: Text('Login con Nro. de telefono'),
-                      onPressed: () {
-                        print(nameController.text);
-                        print(passwordController.text);
-                        Navigator.push(
-                         context,
-                         MaterialPageRoute(builder: (context) => FiveRoute()),
-                        );
-                      },
-                    )),
-                    */                 
+                    )),          
                 Container(
                   child: Row(
                     children: <Widget>[

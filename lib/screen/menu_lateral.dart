@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:codelabs/screen/Login.dart';
+import 'package:codelabs/screen/Registro_restaurante.dart';
 
 
 class MenuLateral extends StatelessWidget{
@@ -31,10 +32,16 @@ class MenuLateral extends StatelessWidget{
             onTap: (){},
           ),
           new ListTile(
-            title: Text("INTEGRANTES"),
+            title: Text("CONTACTANOS"),
           ),
           new ListTile(
-            title: Text("AGREGAR"),
+            title: Text("AGREGAR REST."),
+            onTap: () {
+              Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => REGISTRO_RESTAURANTE()),
+            );
+          },
           ),
           new ListTile(
             title: Text("SALIR"),
